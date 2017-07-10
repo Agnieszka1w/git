@@ -1,0 +1,29 @@
+{
+    "name": "Createshop",
+    "homepage": "https://app.1i2.pl/",
+    "repositories" : [
+        {
+            "type": "vcs",
+            "url": "git@1i2.pl:/home/git/createshop.git"
+        },
+        {
+            "type": "vcs",
+            "url": "git@1i2.pl:/home/git/apps/Base.git"
+        },
+        {
+            "type": "vcs",
+            "url": "git@1i2.pl:/home/git/apps/ModuleManager.git"
+        },
+	{
+            "type": "vcs",
+            "url": "git@1i2.pl:/home/git/apps/Category.git"
+        },
+        {
+    	    "type": "vcs",
+    	    "url": "git@github.com:mkoniarz/routing-auto.git"
+        },
+        {
+            "packagist.org": false
+        }
+    ]
+}

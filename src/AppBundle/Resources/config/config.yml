@@ -1,0 +1,5 @@
+services:
+    acme_basiccms.phpcr.initializer.site:
+        class: AppBundle/Initializer/SiteInitializer
+        tags:
+            - { name: doctrine_phpcr.initializer }

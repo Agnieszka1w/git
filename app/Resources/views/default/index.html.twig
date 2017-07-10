@@ -1,0 +1,66 @@
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+
+	<div id="welcome">
+		<div id="aligner">
+			<h1 id="hello"><span>Welcome to</span> CreateShop</h1>
+		</div>
+	</div>
+
+    <div id="wrapper">
+        <div id="container">
+
+            <div id="next">
+            	<h1>Navigation</h1>
+                <ul>
+                	<a href='{{ app.request.uri }}register'><li> {{ 'layout.register'|trans({}, 'FOSUserBundle') }}</li></a>
+					<a href="{{ app.request.uri }}login"><li> {{ 'layout.login'|trans({}, 'FOSUserBundle') }}</li></a>
+					<a href="{{ app.request.uri }}profile"><li> {{ 'layout.profile'|trans({}, 'FOSUserBundle') }}</li></a>
+                	<a href="{{ app.request.uri }}admin"><li> {{ 'layout.admin'|trans({}, 'FOSUserBundle') }}</li></a>
+                </ul>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+	<script>
+		this.onload = function(){
+			document.getElementById("hello").style.opacity = "1";
+			document.getElementById("welcome").style.opacity = "1";
+		}
+	</script>
+{% endblock %}
+
+{% block stylesheets %}
+<style>
+    body { background: #F5F5F5; font: 18px/1.5 sans-serif; margin: 0;}
+    h1, h2 { line-height: 1.2; margin: 0 0 .5em; }
+    h1 { font-size: 36px; }
+    h2 { font-size: 21px; margin-bottom: 1em; }
+    p { margin: 0 0 1em 0; }
+    a { color: #0000F0; }
+    a:hover { text-decoration: none; }
+    code { background: #F5F5F5; max-width: 100px; padding: 2px 6px; word-wrap: break-word; }
+    #wrapper { background: #FFF; margin: 1em auto; max-width: 800px; width: 95%; }
+    #container { padding: 2em; }
+	#aligner{ height: 100%; display: flex; align-items: center; justify-content: center;}
+	#welcome{height: 100vh; margin: 0; padding: 0; background-image: linear-gradient(#70d9d9, #2b8e8e); opacity: 0.9; transition-duration: 4s;}
+	#hello{ opacity: 0; transition-duration: 3s;}
+    #welcome h1 span { max-width: 50%; font-size: 75%;}
+    #icon-status, #icon-book { float: left; height: 64px; margin-right: 1em; margin-top: -4px; width: 64px; }
+    #icon-book { display: none; }
+
+    @media (min-width: 768px) {
+        #wrapper { width: 80%; margin: 2em auto; }
+        #icon-book { display: inline-block; }
+        #status a, #next a { display: block; }
+
+        @-webkit-keyframes fade-in { 0% { opacity: 0; } 100% { opacity: 1; } }
+        @keyframes fade-in { 0% { opacity: 0; } 100% { opacity: 1; } }
+        .sf-toolbar { opacity: 0; -webkit-animation: fade-in 1s .2s forwards; animation: fade-in 1s .2s forwards;}
+    }
+</style>
+{% endblock %}

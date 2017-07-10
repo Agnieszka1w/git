@@ -1,0 +1,9 @@
+[submodule "src/Createshop/Bundle/BaseBundle"]
+	path = src/Createshop/Bundle/BaseBundle
+	url = git@1i2.pl:/home/git/apps/Base.git
+[submodule "src/Createshop/Bundle/ModuleManagerBundle"]
+	path = src/Createshop/Bundle/ModuleManagerBundle
+	url = git@1i2.pl:/home/git/apps/ModuleManager.git
+[submodule "modules/dev/Createshop/Bundle/CategoryBundle"]
+	path = modules/dev/Createshop/Bundle/CategoryBundle
+	url = git@1i2.pl:/home/git/apps/Category.git

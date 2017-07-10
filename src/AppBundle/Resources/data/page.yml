@@ -1,0 +1,9 @@
+# src/Acme/MainBundle/Resources/data/page.yml
+static:
+    # ...
+
+    my_new_page:
+        name: "my_page"
+        label: "My Page"
+        title: "My new Page"
+        body: "I've added this when following instructions on SO"

@@ -1,0 +1,25 @@
+cmf_routing:
+    chain:
+        routers_by_id:
+            cmf_routing.dynamic_router: 200
+            router.default:             100
+    dynamic:
+        enabled: true
+        persistence:
+            phpcr:
+                enabled:      true
+                manager_name: ~
+                route_basepaths:
+                    - /cms/routes
+                    - /cms/simple
+#                content_basepath: /cms/content
+#                admin_basepath:   /cms/routes
+#                use_sonata_admin: auto
+                enable_initializer: true
+#            use_sonata_admin: false
+        controllers_by_class:
+            AppBundle\Document\Page: AppBundle\Controller\DefaultController::pageAction
+cmf_routing_auto:
+    persistence:
+        phpcr:
+            enabled: true
